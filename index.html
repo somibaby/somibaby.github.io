@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danial Hafiz — Portfolio</title>
+<meta name="description" content="Mechanical engineering student at Hanyang University ERICA. Quality engineering, SPC and data analysis projects.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Danial Hafiz — Portfolio">
+<meta property="og:description" content="Tools that measure, and things that move. Quality engineering and data projects by a mechanical engineering student.">
+<meta property="og:image" content="https://somibaby.github.io/img/og.jpg">
+<meta property="og:url" content="https://somibaby.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231B3BFF'/%3E%3Ctext x='32' y='46' font-family='Impact,Arial Black,sans-serif' font-size='38' fill='%23fff' text-anchor='middle'%3EDH%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--accent:#1B3BFF;--accent2:#EC4213;--ink:#0E0E10;--paper:#F6F4EF;--muted:#6B6B70;--line:rgba(14,14,16,.14)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:400 17px/1.55 "Hanken Grotesk",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%;height:auto}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.display{font-family:Anton,Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.92}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;text-transform:none;letter-spacing:0}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+
+/* header */
+header{padding:22px 0;border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font-weight:700;text-decoration:none;letter-spacing:-.01em}
+nav{display:flex;gap:22px}
+nav a{text-decoration:none;font-weight:500;font-size:15px}
+nav a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:88px 0 72px}
+.hero h1{font-size:clamp(52px,10.5vw,148px)}
+.hero h1 .serif{font-size:1.08em}
+.hero .m{color:var(--accent)} .hero .mv{color:var(--accent2)}
+.hero p{max-width:620px;margin-top:36px;font-size:clamp(18px,2vw,21px);color:#2a2a2e}
+
+/* contents */
+#work{border-top:1px solid var(--line);padding:56px 0 72px}
+.toc{list-style:none;margin-top:22px;border-top:1px solid var(--line)}
+.toc a{display:grid;grid-template-columns:56px 1fr auto;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none}
+.toc .n{font-family:Anton,sans-serif;font-size:22px;color:var(--muted)}
+.toc .t{font-family:Anton,sans-serif;font-size:clamp(26px,4vw,40px);text-transform:uppercase;line-height:1}
+.toc .k{font-size:14px;color:var(--muted);text-align:right}
+.toc a:hover .t{color:var(--accent)}
+
+/* project sections */
+.proj{padding:96px 0}
+.proj .num{font-family:Anton,sans-serif;font-size:20px;opacity:.7}
+.proj h2{font-size:clamp(44px,8vw,104px);margin:10px 0 28px}
+.proj .lede{font-size:clamp(19px,2.1vw,23px);max-width:760px;line-height:1.45}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;margin-top:40px}
+.cols p+p{margin-top:14px}
+.cols ul{padding-left:18px}
+.cols li+li{margin-top:6px}
+dl{display:grid;grid-template-columns:auto 1fr;gap:10px 20px;font-size:15px;align-content:start}
+dt{font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:12px;padding-top:3px;opacity:.75}
+.shots{display:grid;gap:22px;margin-top:56px}
+.shots.two{grid-template-columns:1fr 1fr}
+figure img{border-radius:10px;box-shadow:0 18px 50px -20px rgba(0,0,0,.45)}
+figcaption{font-size:14px;margin-top:10px;opacity:.75}
+.btn{display:inline-flex;align-items:center;gap:10px;margin-top:40px;padding:14px 24px;border-radius:999px;font-weight:600;text-decoration:none;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.note{margin-top:40px;font-size:15px;opacity:.75;font-style:italic}
+
+#studio{background:var(--accent);color:#fff}
+#studio .btn{background:#fff;color:var(--accent)}
+#tableau{background:#fff}
+#money{background:var(--ink);color:#F2F2F2}
+#money .btn{background:#F2F2F2;color:var(--ink)}
+#hanger{background:var(--accent2);color:#fff}
+
+.phones{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:56px}
+.phones img{border-radius:28px;border:6px solid #2A2A2E;box-shadow:0 24px 60px -24px rgba(0,0,0,.8)}
+
+/* about */
+#about{padding:96px 0}
+#about h2{font-size:clamp(44px,8vw,96px);margin-bottom:36px}
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+.about-grid p{font-size:19px}
+.about-grid p+p{margin-top:16px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips span{border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500;background:#fff}
+
+/* contact */
+#contact{border-top:1px solid var(--line);padding:96px 0 48px}
+#contact h2{font-size:clamp(64px,15vw,200px)}
+#contact h2 .serif{color:var(--accent2)}
+.links{display:flex;flex-wrap:wrap;gap:14px 40px;margin-top:40px}
+.links a{font-size:clamp(20px,2.6vw,28px);font-weight:600;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px}
+.links a:hover{color:var(--accent);border-color:var(--accent)}
+.foot{margin-top:96px;font-size:14px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:860px){
+  .cols,.about-grid{grid-template-columns:1fr;gap:32px}
+  .shots.two{grid-template-columns:1fr}
+  .phones{grid-template-columns:1fr 1fr}
+  .proj,#about,#contact{padding:72px 0}
+  .hero{padding:56px 0 48px}
+}
+@media (max-width:520px){
+  .wrap{padding:0 16px}
+  nav{gap:14px}
+  .toc a{grid-template-columns:40px 1fr}
+  .toc .k{display:none}
+}
+</style>
+</head>
+<body>
+
+<div id="top">
+  <header>
+    <div class="wrap">
+      <a class="logo" href="#top">Danial Hafiz</a>
+      <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="display">I build tools that <span class="serif m">measure,</span><br>and things that <span class="serif mv">move.</span></h1>
+      <p>Mechanical engineering student at Hanyang University ERICA, working on quality engineering and data analysis. I turn inspection data into charts and reports people can act on, and I build the software to do it.</p>
+    </div>
+  </section>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="eyebrow">Selected work</div>
+    <ol class="toc">
+      <li><a href="#studio"><span class="n">01</span><span class="t">Data Analysis Studio</span><span class="k">SPC &amp; statistics app</span></a></li>
+      <li><a href="#tableau"><span class="n">02</span><span class="t">Panel Quality Dashboard</span><span class="k">Tableau</span></a></li>
+      <li><a href="#money"><span class="n">03</span><span class="t">Money Tracker</span><span class="k">Mobile app</span></a></li>
+      <li><a href="#hanger"><span class="n">04</span><span class="t">Automatic Hanger</span><span class="k">MATLAB simulation</span></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 01 -->
+<section id="studio" class="proj">
+  <div class="wrap">
+    <div class="num">01</div>
+    <h2 class="display">Data Analysis Studio</h2>
+    <p class="lede">A Minitab-style statistics app for manufacturing quality data. It does control charts, process capability, hypothesis tests and design of experiments, all without paying for commercial statistical software.</p>
+    <div class="cols">
+      <div>
+        <p>It has an Excel-like grid that stays smooth at tens of thousands of rows, and you can paste straight in from Excel or import a CSV. From there you build charts: I-MR, Xbar-R and Xbar-S control charts, Pareto, capability histograms with Cp/Cpk/Pp/Ppk, a full Process Capability Sixpack and Gauge R&amp;R.</p>
+        <p>The statistics (t-tests, ANOVA, regression, correlation, normality and 2-level factorial DOE) are hand-written on numpy and pandas, including the p-value maths. Each result opens in its own floating graph window, the way Minitab does.</p>
+      </div>
+      <dl>
+        <dt>Built with</dt><dd>Python (FastAPI, numpy, pandas, matplotlib), PostgreSQL, TypeScript, Rust → WebAssembly</dd>
+        <dt>Team</dt><dd>Solo</dd>
+        <dt>Context</dt><dd>Personal project, 2026</dd>
+      </dl>
+    </div>
+    <div class="shots two">
+      <figure><img src="img/studio-grid.jpg" alt="Data Analysis Studio data grid showing panel process data with columns for panel ID, shift, operator, machine, cure temperature and thickness" width="1600" height="906" loading="lazy"><figcaption>Data grid: 100 panels of process data, loaded from CSV.</figcaption></figure>
+      <figure><img src="img/studio-charts.jpg" alt="Chart builder with an I-MR control chart and a Pareto chart of defect types" width="1600" height="902" loading="lazy"><figcaption>I-MR control chart and Pareto of defect types, each in its own window.</figcaption></figure>
+    </div>
+    <a class="btn" href="https://github.com/somibaby/data-analysis-studio-2" target="_blank" rel="noopener">View the code →</a>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="tableau" class="proj">
+  <div class="wrap">
+    <div class="num">02</div>
+    <h2 class="display">Panel Quality Dashboard</h2>
+    <p class="lede">One dashboard that answers three questions about composite panel defects: <em>what</em> fails, <em>where</em> it fails and <em>who</em> was running the line.</p>
+    <div class="cols">
+      <div>
+        <p>Using the same panel dataset, a Pareto shows that voids and porosity cause two thirds of all defects. A heatmap breaks each defect type down by press, and a bar chart compares defect rates across operators.</p>
+        <p>Clicking any defect type filters the whole dashboard. For example, selecting porosity shows that it's concentrated on Press 1.</p>
+      </div>
+      <dl>
+        <dt>Built with</dt><dd>Tableau, calculated fields, dashboard filter actions</dd>
+        <dt>Team</dt><dd>Solo</dd>
+        <dt>Context</dt><dd>Personal project, 2026</dd>
+      </dl>
+    </div>
+    <div class="shots two">
+      <figure><img src="img/tableau-dash.jpg" alt="Tableau dashboard with defect Pareto, defect-by-machine heatmap and defect rate by operator" width="1600" height="887" loading="lazy"><figcaption>Full dashboard: what, where, who.</figcaption></figure>
+      <figure><img src="img/tableau-filter.jpg" alt="The same dashboard filtered to porosity defects" width="1600" height="885" loading="lazy"><figcaption>Filtered to porosity with a single click.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="money" class="proj">
+  <div class="wrap">
+    <div class="num">03</div>
+    <h2 class="display">Money Tracker</h2>
+    <p class="lede">A daily expense tracker in Korean won that runs entirely on your phone. There's no account and no server, and it can export a clean CSV for Excel whenever you need one.</p>
+    <div class="cols">
+      <div>
+        <p>Logging an expense takes a few taps: amount keypad, category and an optional note. Data is stored on the device, and every record is validated when the app loads, so an old or corrupted entry is repaired instead of crashing the app.</p>
+        <p>The CSV export is safe for Korean text and opens cleanly in Excel. You can also copy tab-separated rows straight into a spreadsheet.</p>
+      </div>
+      <dl>
+        <dt>Built with</dt><dd>Expo (React Native), TypeScript, AsyncStorage</dd>
+        <dt>Team</dt><dd>Solo</dd>
+        <dt>Context</dt><dd>Personal project, 2026</dd>
+      </dl>
+    </div>
+    <div class="phones">
+      <figure><img src="img/money-home.jpg" alt="Home screen showing safe-to-spend today, budget progress, the last 7 days and recent expenses" width="647" height="1230" loading="lazy"><figcaption>Home: what's safe to spend today.</figcaption></figure>
+      <figure><img src="img/money-new.jpg" alt="New expense sheet with amount keypad, date, category chips and a note field" width="647" height="1230" loading="lazy"><figcaption>New expense: keypad, category, note.</figcaption></figure>
+      <figure><img src="img/money-insights.jpg" alt="Insights screen with month-over-month totals, a daily spending heatmap and a category breakdown" width="647" height="1230" loading="lazy"><figcaption>Insights: month over month and a daily heatmap.</figcaption></figure>
+      <figure><img src="img/money-excel.jpg" alt="Excel screen with CSV download, copy rows button, monthly budget and exported columns" width="647" height="1230" loading="lazy"><figcaption>Excel: CSV export and monthly budget.</figcaption></figure>
+    </div>
+    <a class="btn" href="https://github.com/somibaby/expense-tracker" target="_blank" rel="noopener">View the code →</a>
+  </div>
+</section>
+
+<!-- 04 -->
+<section id="hanger" class="proj">
+  <div class="wrap">
+    <div class="num">04</div>
+    <h2 class="display">Automatic Hanger</h2>
+    <p class="lede">A wall-mounted clothes hanger with two telescoping arms. A sun sensor decides when to push the laundry out into the sun and when to pull it back in for darkness or rain.</p>
+    <div class="cols">
+      <div>
+        <p>The controller is a four-state machine (retracted, extending, extended, retracting). It uses hysteresis so the arms don't chatter at dawn: they extend above 20,000 lux and retract below 8,000 lux. Each condition has to hold for 60 seconds before anything moves. Rain overrides everything and brings the arms in immediately.</p>
+        <p>I modelled and simulated the full day in MATLAB, with sensor, extension and state plots alongside a 3D animation of the mechanism.</p>
+      </div>
+      <dl>
+        <dt>Built with</dt><dd>MATLAB</dd>
+        <dt>Team</dt><dd>Solo</dd>
+        <dt>Context</dt><dd>Personal study project, 2026</dd>
+      </dl>
+    </div>
+    <div class="shots two">
+      <figure><img src="img/hanger-day.jpg" alt="MATLAB 3D view of the hanger extended in daylight at 13:20, next to sensor and controller-state plots" width="1600" height="885" loading="lazy"><figcaption>13:20, 99,597 lux: arms extended.</figcaption></figure>
+      <figure><img src="img/hanger-night.jpg" alt="MATLAB 3D view of the hanger retracted at night at 20:00, next to the same plots" width="1600" height="851" loading="lazy"><figcaption>20:00, 0 lux: arms retracted under the roof.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="display">About</h2>
+    <div class="about-grid">
+      <div>
+        <p>I'm Danial, a Malaysian mechanical engineering student at Hanyang University ERICA in Ansan, South Korea. I like the part of engineering where measurements turn into decisions.</p>
+        <p>In my quality engineering internship at CTRM Aero Composites, I built a Power BI system that replaced manual quality reporting and set up control charts that flagged out-of-tolerance inspection results. The projects above came from wanting to understand those tools from the inside.</p>
+        <p>I'm looking for an entry-level role in quality engineering or data analysis.</p>
+      </div>
+      <dl>
+        <dt>Study</dt><dd>B.Eng. Mechanical Engineering, Hanyang University ERICA (2024–2028)</dd>
+        <dt>Experience</dt><dd>Quality Engineer Intern, CTRM Aero Composites (2026)</dd>
+        <dt>Based in</dt><dd>Ansan, South Korea</dd>
+        <dt>Languages</dt><dd>Malay, English, Korean (TOPIK 3)</dd>
+      </dl>
+    </div>
+    <div class="chips">
+      <span>Statistical process control</span><span>Minitab</span><span>Power BI</span><span>Tableau</span><span>SQL / PostgreSQL</span><span>Python</span><span>Excel (VBA)</span><span>MATLAB</span><span>CATIA</span><span>AutoCAD</span><span>Fusion 360</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2 class="display">Say <span class="serif">hello.</span></h2>
+    <div class="links">
+      <a href="mailto:danihafiz04@gmail.com">danihafiz04@gmail.com</a>
+      <a href="https://github.com/somibaby" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <div class="foot"><span>© 2026 Muhammad Danial Hafiz</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</section>
+
+</body>
+</html>
